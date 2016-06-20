@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocChat">
 <head lang="en">
+    <base href="/">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+    <h1 class="title">Component Router</h1>
+    <bloc-chat>asdf</bloc-chat>
+
     <!-- AngularJS 1.5.6 -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
 		<script src="https://npmcdn.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
 
     <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 
     <!-- Angular Fire -->
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 
     <!-- App -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/room-component.js"></script>
+    <script src="/scripts/roomList.component.js"></script>
 
 </body>
 </html>
