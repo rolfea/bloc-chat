@@ -1,6 +1,6 @@
 (function() {
   angular
-    .module('rooms', [])
+    .module('rooms', ['firebase'])
 
     .component('rooms', {
       template: "<ng-outlet></ng-outlet>",
