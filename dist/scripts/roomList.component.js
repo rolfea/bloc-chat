@@ -9,7 +9,18 @@
       var $ctrl = this;
       var firebaseRef = new Firebase("https://bloc-chat27.firebaseio.com/");
       $ctrl.roomList = $firebaseArray(firebaseRef);
-      console.log($ctrl.roomList);
+      $ctrl.newRoomName = "Room Name";
+
+      // Add Chat Room to Array and print id to console on page load
+      $ctrl.addRoom = function() {
+        $ctrl.roomList.$add({"roomName": $ctrl.newRoomName})
+      }
+
+      $ctrl.removeRoom = function(listPosition) {
+        var removeThisItem = $ctrl.roomList[listPosition];
+        $ctrl.roomList.$remove(removeThisItem)        
+      }
+
 
 
       // activate();

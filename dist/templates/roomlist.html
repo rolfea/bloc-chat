@@ -1,4 +1,10 @@
 <p>List of Rooms </p>
 <div ng-repeat="room in $ctrl.roomList">
-<p> {{ room.$id }} </p>
+  <li>
+    <p> {{ room.roomName }} </p>
+    <button ng-click="$ctrl.removeRoom($ctrl.roomList.$indexFor(room.$id))">Remove</button>
+  </li>
 </div>
+
+<input ng-model="$ctrl.newRoomName" placeholder="{{$ctrl.newRoomName}}">
+<button ng-click="$ctrl.addRoom()">Add A Chat Room</button>

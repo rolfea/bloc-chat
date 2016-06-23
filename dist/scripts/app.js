@@ -10,11 +10,8 @@ angular.module('blocChat', [
   .value('$routerRootComponent', 'blocChat')
 
   .component('blocChat', {
-    templateUrl: "templates/app.html",
+    template: '<ng-outlet></ng-outlet>',
     $routeConfig: [
       {path: '/rooms/...', name: 'Rooms', component: 'rooms', useAsDefault: true},
     ],
-    controller: function() {
-      console.log("asdfasdf");
-    }
   });
