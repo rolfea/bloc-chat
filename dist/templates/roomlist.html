@@ -1,7 +1,7 @@
 <p>List of Rooms </p>
 <div ng-repeat="room in $ctrl.roomList">
   <li>
-    <p> {{ room.roomName }} </p>
+    <a ng-link="['RoomDetail', {id: room.$id}]"> {{ room.roomName }} </a>
     <button ng-click="$ctrl.removeRoom($ctrl.roomList.$indexFor(room.$id))">Remove</button>
   </li>
 </div>
